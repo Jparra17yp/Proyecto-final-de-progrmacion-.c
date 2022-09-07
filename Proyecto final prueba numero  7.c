@@ -1,4 +1,4 @@
-#include <stdio.h> 
+include <stdio.h> 
 #include <stdlib.h>
 #include <string.h>
 
@@ -21,20 +21,20 @@
 #define LONGITUD 5
 
 #define MAX_INTENTOS 3
-int menu(); //Función correspondiente al menú principal
+int menu(); //FunciÃ³n correspondiente al menÃº principal
 
-int menu_productos (int user); /*Función que ejecuta un sub-menú 
+int menu_productos (int user); /*FunciÃ³n que ejecuta un sub-menÃº 
                                   dedicado al apartado de productos*/
 
-void continuar();//Función que pausa la ejecución hasta que el usuario indique
-void creaStock();//Función que genera un archivo con el stock de productos
-void imprimeStock();//Función que imprime el stock de productos
-void modificarPrecio();//Función que permite modificar el precio de un producto
-void modificarCantidad();//Función que permite modificar la cantidad de existencais de un producto
-void modificarNombre();//Función que permite modificar el nombre de un producto
-void modificarCodigo();//Función que permite modificar el codigo de un producto
-void vaciaStoctk();//Función que elimina el archivo correspondiente al Stock
-void menuModificar();//Función que invoca un menu el cual se encarga de todas las funciones modificar
+void continuar();//FunciÃ³n que pausa la ejecuciÃ³n hasta que el usuario indique
+void creaStock();//FunciÃ³n que genera un archivo con el stock de productos
+void imprimeStock();//FunciÃ³n que imprime el stock de productos
+void modificarPrecio();//FunciÃ³n que permite modificar el precio de un producto
+void modificarCantidad();//FunciÃ³n que permite modificar la cantidad de existencais de un producto
+void modificarNombre();//FunciÃ³n que permite modificar el nombre de un producto
+void modificarCodigo();//FunciÃ³n que permite modificar el codigo de un producto
+void vaciaStoctk();//FunciÃ³n que elimina el archivo correspondiente al Stock
+void menuModificar();//FunciÃ³n que invoca un menu el cual se encarga de todas las funciones modificar
 
 typedef struct datosUsuario //struct dedicado a los datos de cada usuario
 {
@@ -59,7 +59,7 @@ typedef struct usuario Usuario;
 
 
 
-/* Funciones de men� */
+/* Funciones de menú */
 
 void menuInicial();
 
@@ -235,7 +235,7 @@ printf("\n\tEl usuario fue registrado satisfactoriamente!\n");
 
 printf("\n\tOcurrio un error al registrar el usuario\n");
 
-printf("\nInt�ntelo mas tarde\n");
+printf("\nInténtelo mas tarde\n");
 
 }
 
@@ -281,7 +281,7 @@ int i;
 
 system("cls");
 
-usuarios = obtenerUsuarios(&numeroUsuarios); /* Retorna un vector din�mico de usuarios */
+usuarios = obtenerUsuarios(&numeroUsuarios); /* Retorna un vector dinámico de usuarios */
 
 
 
@@ -303,7 +303,7 @@ printf(" -----------------------------------------------------------------------
 
 
 
-/* Se recorre el vector din�mico de productos */
+/* Se recorre el vector dinámico de productos */
 
 for (i = 0; i < numeroUsuarios; i++) {
 
@@ -317,7 +317,7 @@ printf(" -----------------------------------------------------------------------
 
 
 
-// Se libera la memoria asignada al vector din�mico
+// Se libera la memoria asignada al vector dinámico
 
 free(usuarios);
 
@@ -421,9 +421,9 @@ printf("\n\t\tAqui va todo el contenido de tu sistema ;)");
 
 /** 
 
-* Escribe aqu� el resto 
+* Escribe aquí el resto 
 
-* de todo tu c�digo
+* de todo tu código
 
 * ....
 
@@ -445,7 +445,7 @@ getchar();
 
 
 
-/* Retorna 1 si se registr� el usuario en el archivo correctamente */
+/* Retorna 1 si se registró el usuario en el archivo correctamente */
 
 char insertarUsuario(Usuario usuario) {
 
@@ -455,7 +455,7 @@ char insercion = 0;
 
 
 
-/* Abre el archivo en modo de a�adidura, para agregar datos al final. Si no existe es creado*/
+/* Abre el archivo en modo de añadidura, para agregar datos al final. Si no existe es creado*/
 
 archivo = fopen(ARCHIVO_USUARIOS, "ab");
 
@@ -563,7 +563,7 @@ FILE *archivo;
 
 Usuario usuario;
 
-Usuario *usuarios; /* Vector din�mico de usuarios */
+Usuario *usuarios; /* Vector dinámico de usuarios */
 
 int i;
 
@@ -703,7 +703,7 @@ int i, c;
 
 
 
-/* 1 COMPROBACI�N DE DATOS INICIALES EN EL BUFFER */
+/* 1 COMPROBACIÓN DE DATOS INICIALES EN EL BUFFER */
 
 c = getchar();
 
@@ -814,11 +814,11 @@ i++;
   float precio;
 } d_producto;
 
-int main () {//Función principal
+int main () {//FunciÃ³n principal
   int elect, op1;
   do
   {
-    elect = menu_productos(1); //Llamada al sub-menú de productos
+    elect = menu_productos(1); //Llamada al sub-menÃº de productos
   switch (elect)
   {
   case 1:
@@ -844,9 +844,9 @@ int main () {//Función principal
     printf("Opcion no existente");//Mensaje en caso de ingresar una respuesta no esperada
     break;
   }
-  } while (elect != 5);/*Un bucle que no finalizará hasta 
+  } while (elect != 5);/*Un bucle que no finalizarÃ¡ hasta 
                         que el usuario indique, por lo que 
-                        el programa mostrará el menú constantemente*/
+                        el programa mostrarÃ¡ el menÃº constantemente*/
   
   return 0;
 }
@@ -866,7 +866,7 @@ int menu_productos(int user)
     printf("\n3 - Si desea modificar productos del stock");
     printf("\n4 - Si desea vaciar el stock");
     printf("\n5 - Si desea salir del sistema\n");
-    scanf("%d", &election); //Guarda la elección del usuario
+    scanf("%d", &election); //Guarda la elecciÃ³n del usuario
   }
   else if (user == 0)
   {
@@ -878,7 +878,7 @@ int menu_productos(int user)
     printf("\n3 - Si desea revisar su carro de compra");
     printf("\n4 - Si desea finalizar su compra");
     printf("\n5 - Si desea cancelar su compra\n");
-    scanf("%d", &election); //Guarda la elección del usuario
+    scanf("%d", &election); //Guarda la elecciÃ³n del usuario
   }
   else
   {
@@ -887,12 +887,12 @@ int menu_productos(int user)
                                                                       por lo cual no se le reconozca 
                                                                       ni como usuario o admin*/
   }
-  return election;//Devuelve la elección
+  return election;//Devuelve la elecciÃ³n
 }
 void continuar()
 {
   printf("\n\n");/*Un mensaje para indicar a el usuario 
-                                                          qué hacer cuando se pause el programa*/
+                                                          quÃ© hacer cuando se pause el programa*/
   system("pause");//Pausa el programa
 }
 void creaStock()
@@ -902,8 +902,8 @@ void creaStock()
   int n = 0; 
   FILE *archivo; //Puntero para los archivos .db
   archivo=fopen("Stock.db", "ab"); /*Busca un archivo llamado Stock, debido a los atributos 
-                                    en caso de no existir lo crea y en caso de que sí, todo 
-                                    lo que se escriba se añade al archivo existente en binario*/
+                                    en caso de no existir lo crea y en caso de que sÃ­, todo 
+                                    lo que se escriba se aÃ±ade al archivo existente en binario*/
 
   d_producto control;//Struct para el control del stock
 
@@ -925,8 +925,8 @@ void creaStock()
         printf("\nDigite el precio del producto: ");
         scanf("%f", &control.precio);
         
-        printf("\n\nDigite segun corresponda: "); /*Pequeño sub-menu que permite al usuario indicar el número 
-                                                    de veces que va a añadir un producto*/
+        printf("\n\nDigite segun corresponda: "); /*PequeÃ±o sub-menu que permite al usuario indicar el nÃºmero 
+                                                    de veces que va a aÃ±adir un producto*/
         printf("\n1- Si desea agregar otro producto ");
         printf("\n2 - Si desea volver al menu anterior \n");
         scanf("%d", &n);
@@ -964,7 +964,7 @@ void imprimeStock()
       fread(&imp, sizeof(d_producto), 1, archivo);//Lee archivo
       
         while(!feof(archivo)&&!ferror(archivo))/*Un bucle que no va a terminar hasta que se encuentre 
-                                                con el final del archivo o algún tipo de error*/
+                                                con el final del archivo o algÃºn tipo de error*/
         {
           printf("\nProducto: %s", imp.nombre);
           printf("\nCodigo: %d", imp.codigo);
@@ -1146,7 +1146,7 @@ void modificarCodigo()
           int n = ftell(archivo) - sizeof(d_producto);
           fseek(archivo, n, SEEK_SET);
           fwrite(&modifx, sizeof(d_producto), 1, archivo);
-          printf("\nSe ha modificado con éxito el producto.");  
+          printf("\nSe ha modificado con Ã©xito el producto.");  
           existe=1; 
           break;     
         }
@@ -1219,4 +1219,3 @@ void menuModificar()
     }
   } while (op1 != 5);
 }
-
